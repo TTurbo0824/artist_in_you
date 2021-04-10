@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400&family=Roboto:wght@400&display=swap');
+
+ul {
+    display: inline; 
+    text-align: center;
+    line-height: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.app-frame {
+    background: #fee3db;
+    /* background: rgba(0, 0, 0, 0.3); */
+    max-width: 450px;
+    min-height: 500px;
+    height: 90vh;
+    border-radius: 20px;
+    margin: 0px auto;
+    padding: 30px 0;
+}
+
+/* .answerOption {
+    border-top: 1px solid #eee;
+}
+ 
+*/
+.answerOption {
+    font-family: 'Roboto';
+}
+
+.answerOptionButton {
+    position: absolute;
+    width: auto;
+    opacity: 0;
+}
+
+.answerOptionButton,
+.answerOptionLabel {
+    /* display: inline-block; */
+    display: flex;
+
+    /* justify-content: center; */
+    /* align-items: center; */
+
+    /* vertical-align: middle; */
+    cursor: pointer;
+}
+
+.answerOptionLabel {
+    position: relative;
+    /* max-width: 500px; */
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 1.5rem 4rem 1.5rem 4rem;
+    font-size: 16px;
+    line-height: 1.5rem;
+    background-color: #eefbfe;
+    border-radius: 15px;
+}
+
+.answerOptionLabel:hover {
+    background-color: #fee3db;
+} 
+
+.img-box {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+}
