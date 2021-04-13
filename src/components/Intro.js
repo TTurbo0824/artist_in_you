@@ -15,7 +15,7 @@ const Wrapper = styled.div`
     position: relative;
     font-family: ${fonts.$titleFont};
     font-size: 1.1em;
-    color: white;
+    color: ${colors.$textColor};
     text-align: center;
     padding-top: 2em;
     ${media.tablet`font-size: 1.5em; letter-spacing: 1.5px;`};
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
       margin-bottom: 0;
       font-family: ${fonts.$robotoFont};
       border: 0;
-      color: white;
+      color: ${colors.$textColor};
       ${media.tablet`font-size: 1.3em`};
       text-align: center;
     }

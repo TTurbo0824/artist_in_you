@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   renderIntro() {
-    return <Intro _onStartClick={this._onStartClick} title="Welcome To Artist in You 🎨" />
+    return <Intro _onStartClick={this._onStartClick} title="Artist in You" />
   }
 
   renderQuestion() {

@@ -8,8 +8,8 @@ import { fonts } from '../utils/_var'
 
 const Wrapper = styled.div`
   ${media.largerPhone`margin: .4em;`};
-  ${media.tablet`margin: 1em 2.5em;`};
-  ${media.laptop`margin: 1em 2.5em;`};
+  ${media.tablet`margin: 0.8em 2em;`};
+  ${media.laptop`margin: 1em 2em;`};
   .questionCount {
     position: relative;
     padding: 1em 2em;

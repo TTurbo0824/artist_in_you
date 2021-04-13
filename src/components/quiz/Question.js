@@ -15,7 +15,7 @@ const Wrapper = styled.div`
       h1 {
         font-size: 1.1rem;
         font-family: ${fonts.$titleFont};
-        text-align: center;
+        text-align: left;
         line-height: 1.7em;
       }
     }
