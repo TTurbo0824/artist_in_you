@@ -7,7 +7,7 @@ import { fonts } from '../utils/_var'
 
 
 const Wrapper = styled.div`
-  ${media.largerPhone`margin: .4em;`};
+  ${media.mobile`margin: .4em;`};
   ${media.tablet`margin: 0.8em 2em;`};
   ${media.laptop`margin: 1em 2em;`};
   .questionCount {
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
     text-align: right;
     font-family: ${fonts.$titleFont};
     font-size: 0.8em;
-    ${media.largerPhone`font-size: 0.9em;`};
+    ${media.mobile`font-size: 0.9em;`};
   }
 `
 

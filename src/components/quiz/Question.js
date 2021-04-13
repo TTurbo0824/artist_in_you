@@ -4,17 +4,19 @@ import React from 'react'
 import propTypes from 'prop-types'
 import styled from 'styled-components'
 import '../utils/App.css'
-import { fonts } from '../utils/_var'
+import { fonts, colors } from '../utils/_var'
+import { media } from '../utils/_media-queries'
 
 const Wrapper = styled.div`
   .row {
     margin-top: 4.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     .col {
       padding: 0 3rem;
       h1 {
-        font-size: 1.1rem;
         font-family: ${fonts.$titleFont};
+        font-size: 1.1rem;
+        color: ${colors.$textColor};
         text-align: left;
         line-height: 1.7em;
       }

@@ -45,7 +45,6 @@ class Question extends Component {
         Briggs: {
           I: 1,
           S: 1,
-
           T: 1,
           J: 1,
         }
@@ -56,7 +55,7 @@ class Question extends Component {
   }
 
   // populate app’s state using the componentWillMount life cycle event
-  componentWillMount() {
+  componentDidMount() {
     const answerOptions = quizQuestions.map(question => question.answers)
     this.setState({
       question: quizQuestions[0].question,
