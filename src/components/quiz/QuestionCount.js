@@ -1,29 +1,47 @@
 import React from 'react'
 import propTypes from 'prop-types'
 import styled from 'styled-components'
-import { media } from '../utils/_media-queries'
 import '../utils/App.css'
-import { fonts } from '../utils/_var'
+import { media } from '../utils/_media-queries'
+import { fonts, colors } from '../utils/_var'
 
 const Wrapper = styled.div`
-  ${media.mobile`margin: .4em;`};
-  ${media.tablet`margin: 0.8em 2em;`};
-  ${media.laptop`margin: 1em 2em;`};
-  .questionCount {
-    position: relative;
-    padding: 1em 2em;
+  margin: 1em 2em;
+  .questionCountLeft {
+    display: inline-block;
+    border-bottom: solid 2px ${colors.$pinkColor};
+    padding-bottom: 1px;
+    font-family: ${fonts.$titleFont};
+    text-align: left;
+    font-size: 0.8em;
+    color: ${colors.$pinkColor};
+    ${media.mobile`font-size: 1.25em;`};
+    ${media.tablet`font-size: 1.5em;`};
+  }
+
+  .questionCountRight {
+    display: inline-block;
+    padding: 0.5em 1.25em;
+    background-color: #E5E4E2;
+    border-radius: 30px;
+    float: right;
     text-align: right;
     font-family: ${fonts.$titleFont};
     font-size: 0.8em;
-    ${media.mobile`font-size: 0.9em;`};
+    color: ${colors.$textColor};
+    ${media.mobile`font-size: 0.75em;`};
+    ${media.tablet`font-size: 0.9em;`};
   }
 `
 
 const QuestionCount = props => {
   return (
     <Wrapper>
-      <div className="questionCount">
-        Question <span>{props.counter}</span> / <span>{props.total}</span>
+      <div className="questionCountLeft">
+      Q{props.counter}
+      </div>
+      <div className="questionCountRight">
+        <b><span>{props.counter}</span> / <span>{props.total}</span></b>
       </div> 
     </Wrapper>
   )

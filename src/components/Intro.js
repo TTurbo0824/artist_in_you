@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { StartBtn } from '../components/utils/Buttons'
-import { media } from '../components/utils/_media-queries'
 import '../components/utils/App.css'
+import { media } from '../components/utils/_media-queries'
 import { fonts, colors } from '../components/utils/_var'
+import { StartBtn } from '../components/utils/Buttons'
 
 const Wrapper = styled.div`
   position: absolute;

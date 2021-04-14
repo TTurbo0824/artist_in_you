@@ -1,14 +1,11 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import Artist from "./Artist"
 import styled from 'styled-components'
 import { media } from '../utils/_media-queries'
 import { fonts, colors } from '../utils/_var'
 
-// import { Wrapper } from '../utils/ResultWrapper'
-import Artist from "./Artist"
-
 const Wrapper = styled.div`
-
   .title {
     font-family: ${fonts.$titleFont};
     font-size: 2em;
@@ -23,12 +20,11 @@ const Wrapper = styled.div`
   }
   .resultTxt {
     font-family: ${fonts.$mainFont};
-    color: ${colors.$colorGold};
+    color: ${colors.$pinkColor};
     text-align: center;
     ${media.tablet`font-size: 2em`};
     ${media.laptop`font-size: 2.2em`};
   }
-
   .my-5 {
     width: 0;
     margin-bottom: -1em !important;
@@ -63,6 +59,13 @@ const Wrapper = styled.div`
     text-align: left;
     white-space: pre-wrap;
     ${media.laptop`font-size: 1em`};
+  }
+  .img-box {
+    ${media.mobile`height: 125px; width: 125px;`};
+    ${media.tablet`height: 200px; width: 200px`};
+    margin: auto;
+    background-size: cover;
+    background-position: center;
   }
 `
 

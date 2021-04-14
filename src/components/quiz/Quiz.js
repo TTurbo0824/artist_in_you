@@ -1,16 +1,16 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import Question from './Question'
 import QuestionCount from './QuestionCount'
 import AnswerOption from './AnswerOption'
-import { media } from '../utils/_media-queries'
+// import { media } from '../utils/_media-queries'
 
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-`
+// const Wrapper = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center; 
+// `
 
 const Quiz = props => {
   const renderAnswerOptions = key => {
@@ -30,9 +30,7 @@ const Quiz = props => {
     // <Wrapper key={props.questionId}>
       <div className="app-frame">
         <QuestionCount counter={props.questionId} total={props.questionTotal} />
-        <div className="w-100" />
         <Question content={props.question} />
-        <div className="w-100" />
         <ul>{props.answerOptions.map(renderAnswerOptions)}</ul>
       </div>
     // </Wrapper>

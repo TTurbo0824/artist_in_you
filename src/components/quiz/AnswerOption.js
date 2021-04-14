@@ -2,14 +2,13 @@ import React from 'react'
 import propTypes from 'prop-types'
 import styled from 'styled-components'
 import '../utils/App.css'
-import { fonts, colors } from '../utils/_var'
+import { fonts } from '../utils/_var'
 import { media } from '../utils/_media-queries'
 
 const Wrapper = styled.div`
-
 .answerOptionLabel {
-  ${media.mobile`font-size: 1em; padding: 1rem 2rem 1rem 2rem; color: red;`};
-  ${media.tablet`font-size: 1.5em; padding: 1.5rem 4rem 1.5rem 4rem; color: blue;`};
+  ${media.mobile`font-size: 1em; padding: 1rem 2rem 1rem 2rem;`};
+  ${media.tablet`font-size: 1.25em; padding: 1.75rem 4rem 1.75rem 4rem;`};
 }
 
   // ${media.mobile`margin: .4em;`};

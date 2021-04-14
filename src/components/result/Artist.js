@@ -52,7 +52,7 @@ const Artist = [{
     "artistName": "Frida Kahlo",
     "quote": "I paint self-portraits because I am so often alone, because I am the person I know best.",
     "date": "Frida Kahlo (1907-1954)",
-    "description": "Reserved, creative, and attentive, you resemble Frida Kahlo, one of Mexico's greatest artists. \nFrida Kahlo is renowned for her self-portraits, symbolic expression of her own pain and sexuality. In 1925, Kahlo was involved in a serious bus accident that profoundly changed her life and art. The accident left her with lifelong pain. However, Kahlo didn't let pain crash her, but she transformed her pain into fuel for art and art into a means for survival.",
+    "description": "Reserved, creative, and attentive, you resemble Frida Kahlo, one of Mexico's greatest artists. \n\nFrida Kahlo is renowned for her self-portraits, symbolic expression of her own pain and sexuality. In 1925, Kahlo was involved in a serious bus accident that profoundly changed her life and art. The accident left her with lifelong pain. However, Kahlo didn't let pain crash her, but she transformed her pain into fuel for art and art into a means for survival.",
     "image": "frida"
 
 }]
