@@ -5,7 +5,6 @@ import { media } from '../utils/_media-queries'
 import '../utils/App.css'
 import { fonts } from '../utils/_var'
 
-
 const Wrapper = styled.div`
   ${media.mobile`margin: .4em;`};
   ${media.tablet`margin: 0.8em 2em;`};

@@ -1,5 +1,3 @@
-// question only
-
 import React from 'react'
 import propTypes from 'prop-types'
 import styled from 'styled-components'
@@ -9,8 +7,8 @@ import { media } from '../utils/_media-queries'
 
 const Wrapper = styled.div`
   .row {
-    margin-top: 4.5rem;
-    margin-bottom: 2rem;
+    ${media.mobile`margin-top: 3rem; margin-bottom: 0.5rem;`};
+    ${media.tablet`margin-top: 4.5rem; margin-bottom: 2rem;`};
     .col {
       padding: 0 3rem;
       h1 {
