@@ -3,7 +3,7 @@ import { css } from 'styled-components'
 const sizes = {
   huge: 1280,
   laptop: 992,
-  tablet: 768,
+  tablet: 640,
   mobile: 320
 }
 

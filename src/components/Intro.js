@@ -13,18 +13,17 @@ const Wrapper = styled.div`
 
   h1 {
     position: relative;
-    font-family: ${fonts.$titleFont};
-    font-size: 1.1em;
+    font-family: Cabin Sketch;
     color: ${colors.$textColor};
     text-align: center;
     padding-top: 2em;
-    ${media.tablet`font-size: 1.5em; letter-spacing: 1.5px;`};
-    ${media.laptop`font-size: 2em; letter-spacing: 2px;`};
+    ${media.mobile`font-size: 2em; letter-spacing: 2px;`};
+    ${media.tablet`font-size: 2.7em; letter-spacing: 3px;`};
   }
   .list-group {
     padding: 0 2em;
     margin-top: 10%;
-    .list-group-item {
+    .list-item {
       background: transparent;
       padding: 1em 1.25em;
       margin-bottom: 0;
@@ -41,10 +40,10 @@ const Intro = ({ title, _onStartClick }) => {
   return (
     <Wrapper>
       <div className="app-frame">
-        <h1>{title}</h1>
+        <h1><b>{title}</b></h1>
       <ul className="list-group">
-        <li className="list-group-item">This test consits of 12 questions</li>
-        <li className="list-group-item">Please answer quickly and honestly</li>
+        <li className="list-item">This test consits of 12 questions</li>
+        <li className="list-item">Please answer quickly and honestly</li>
       </ul>
       <StartBtn onClick={_onStartClick}>
         <span>Start Test</span>
