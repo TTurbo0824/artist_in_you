@@ -24,8 +24,8 @@ const Wrapper = styled.div`
     font-family: ${fonts.$mainFont};
     text-align: center;
     color: ${colors.$pinkColor};
-    ${media.mobile`font-size: 1.5em`};
-    ${media.tablet`font-size: 1.8em`};
+    ${media.mobile`font-size: 1.5em;`};
+    ${media.tablet`font-size: 1.8em;`};
     margin-bottom: .75em;
   }
   .my-4 {
@@ -39,7 +39,7 @@ const Wrapper = styled.div`
   }
   .quoteContainer {
     width: 75%;
-    background-color: #e5e4e2;
+    background-color: ${colors.$grayColor};
     border-radius: 15px;
     margin: 0em auto 1em auto;
     padding: 1em .2em .2em .2em;
@@ -52,8 +52,8 @@ const Wrapper = styled.div`
     font-family: Georgia;
     color: ${colors.$textColor};
     text-align: center;
-    ${media.mobile`font-size: .9em`};
-    ${media.tablet`font-size: 1em`};
+    ${media.mobile`font-size: .9em;`};
+    ${media.tablet`font-size: 1em;`};
   }
   .date {
     margin-left: auto;
@@ -75,8 +75,8 @@ const Wrapper = styled.div`
     color: ${colors.$textColor};
     text-align: left;
     white-space: pre-wrap;
-    ${media.mobile`font-size: .9em`};
-    ${media.tablet`font-size: 1em`};
+    ${media.mobile`font-size: .9em;`};
+    ${media.tablet`font-size: 1em;`};
   }
   .img-box {
     ${media.mobile`height: 150px; width: 150px;`};
@@ -89,7 +89,7 @@ const Wrapper = styled.div`
 
 function Result(props) {
   var artist;
-  artist = Artist[7];
+  artist = Artist[0];
   // if (props.resultBriggs === "ESTP" || props.resultBriggs === "ESFP") {
   //     artist = Artist[0];
   // } else if (props.resultBriggs === "ISTJ" || props.resultBriggs === "ISFJ") {

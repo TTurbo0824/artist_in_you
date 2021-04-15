@@ -4,8 +4,8 @@ import { fonts, colors } from './_var'
 
 const StartBtn = styled.div`
   display: block;
-  ${media.mobile`width: 6.5em; height: 3em; line-height: 3em; bottom: 12em;`};
-  ${media.tablet`width: 7.5em; height: 3.5em; line-height: 3.5em; bottom: 8.5em;`};
+  ${media.mobile`width: 6em; height: 3em; line-height: 3em; bottom: 12em;`};
+  ${media.tablet`width: 7em; height: 3.5em; line-height: 3.5em; bottom: 8.5em;`};
   background: ${colors.$textColor};
   position: absolute;
   left: 0;
