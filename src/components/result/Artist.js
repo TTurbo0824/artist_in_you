@@ -1,10 +1,16 @@
 const Artist = [{
     "id": 0,
-    "artistName": "Henri Toulouse-Lautrec",
+    "artistName": "Henri de Toulouse-Lautrec",
     "quote": "Everywhere and always ugliness has its beautiful aspects; it is thrilling to discover them where nobody else has noticed them.",
-    "date": "Henri Toulouse-Lautrec (1864-1901)",
+    "date": "Henri de Toulouse-Lautrec (1864-1901)",
     "description": "Sociable, highly flexible, and optimistic, you resemble Henri de Toulouse-Lautrec, a renowned French Post-Impressionist artist.\n\nHenri de Toulouse-Lautrec was the first artist to elevate advertising to the status of fine art. Toulouse-Lautrec was born into a French aristocrat family, but a series of childhood accidents combined with congenital health conditions permanently stunted his physical growth at a very young age. Despite his physical afflictions, Toulouse-Lautrec had a lovable, outgoing personality and a terrific work ethic.\n\nWith great psychological insight, Toulouse-Lautrec observed and documented facets of Parisian nightlife and the French world of entertainment in the 1890s. Throughout his work, Toulouse-Lautrec often portrayed unconventional individuals in an audacious manner both frank and sympathetic.\n\nLiving very much in the here-and-now, you have the ability to adapt to any circumstances. With a strong awareness of your surroundings, you are also very perceptive and understanding of other people around you. Due to these characteristics of you, others find you warm, sympathetic, and easygoing.\n\nYou are popular and well-liked by others, but you become easily bored rather quickly when things get serious. Your thirst for new experiences may lead you to develop a tendency to pursue risky behavior or the pleasures of the moment at the expense of long-term plans. Sometimes it would be helpful if you refrain from impulsive and spontaneous behaviors and try to establish and accomplish long-term goals.",
-    "image": "lautrec"
+    "image": "lautrec",
+    "facts": ["Henri de Toulouse-Lautrec created iconic posters for the Moulin Rouge.",
+    "Lautrec was allegedly credited with the creation of the Earthquake cocktail, an extraordinarily strong cocktail.",
+    "First made the acquaintance at Cormon's atelier, Lautrec and Van Gogh shared a courteous relationship based on mutual respect.",
+    "Lautrec was a friend and supporter of Oscar Wilde.",
+    "Lautrec loved to cook and host raucous dinner parties. His collection of recipes was later published by his close friend."]
+    // "facts": "Henri de Toulouse-Lautrec created iconic posters for the Moulin Rouge.\nLautrec was allegedly credited with the creation of the Earthquake cocktail, an extraordinarily strong cocktail.\nFirst made the acquaintance at Cormon's atelier, Lautrec and Van Gogh shared a courteous relationship based on mutual respect.\nLautrec was a friend and supporter of Oscar Wilde.\nLautrec loved to cook and host raucous dinner parties. His collection of recipes was later published by his close friend."
 },
 {
     "id": 1,

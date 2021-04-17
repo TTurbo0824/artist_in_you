@@ -20,6 +20,17 @@ const Wrapper = styled.div`
     ${media.mobile`font-size: 2em; letter-spacing: 2px;`};
     ${media.tablet`font-size: 2.7em; letter-spacing: 3px;`};
   }
+  
+  ul {
+    display: inline; 
+    text-align: center;
+    line-height: 100%;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
   .list-group {
     padding: 0 2em;
     margin-top: 10%;

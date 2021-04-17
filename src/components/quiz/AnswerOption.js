@@ -6,11 +6,14 @@ import { fonts } from '../utils/_var'
 import { media } from '../utils/_media-queries'
 
 const Wrapper = styled.div`
-.answerOptionLabel {
-  ${media.mobile`font-size: 1em; padding: 1rem 2rem 1rem 2rem;`};
-  ${media.tablet`font-size: 1.25em; padding: 1.75rem 4rem 1.75rem 4rem;`};
-}
-
+  li {
+    list-style-type: none;
+  }
+  
+  .answerOptionLabel {
+    ${media.mobile`font-size: 1em; padding: 1rem 2rem 1rem 2rem;`};
+    ${media.tablet`font-size: 1.25em; padding: 1.75rem 4rem 1.75rem 4rem;`};
+  }
   // ${media.mobile`margin: .4em;`};
   // ${media.tablet`margin: 0.8em 2em;`};
   // ${media.laptop`margin: 1em 2em;`};

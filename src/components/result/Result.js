@@ -20,6 +20,20 @@ const Wrapper = styled.div`
     padding: .4em .75em;
     border-radius: 20px;
   }
+  ul {
+    padding: 0 0 4em 1em;
+  }
+  li {
+    // list-style-type: "🎨 ";
+    width: 85%;
+    margin: auto;
+    color: ${colors.$textColor};
+    line-height: 1.7em;
+    font-family: ${fonts.$titleFont};
+    ${media.mobile`font-size: .9em;`};
+    ${media.tablet`font-size: 1em;`};
+  }
+
   .artistName {
     font-family: ${fonts.$mainFont};
     text-align: center;
@@ -128,6 +142,15 @@ function Result(props) {
           <p className="date">{artist.date}</p>
         </div>
         <p className="description">{artist.description}</p>
+        <h1 className="title"><span>Interesting Facts about {artist.artistName}</span></h1>
+        <ul>
+          <li>{artist.facts[0]}</li>
+          <li>{artist.facts[1]}</li>
+          <li>{artist.facts[2]}</li>
+          <li>{artist.facts[3]}</li>
+          <li>{artist.facts[4]}</li>
+        </ul>
+        <div styles="padding-bottom: 40px; background: black"></div>
       </div>
     </Wrapper>
   );

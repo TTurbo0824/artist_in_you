@@ -1,16 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400&family=Roboto:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
 
-ul {
-    display: inline; 
-    text-align: center;
-    line-height: 100%;
-}
-
-li {
-    list-style-type: none;
-}
-
 .container {
     display: flex;
     align-items: center;

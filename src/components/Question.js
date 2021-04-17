@@ -17,6 +17,7 @@ const Wrapper = styled.div`
   margin: auto;
 
   li {
+    list-style-type: none;
     max-width: 75%;
     margin: auto;
   }
