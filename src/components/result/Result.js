@@ -1,5 +1,8 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import OwlCarousel from "react-owl-carousel"
+import "owl.carousel/dist/assets/owl.carousel.css"
+import "owl.carousel/dist/assets/owl.theme.default.css"
 import Artist from "./Artist"
 import styled from 'styled-components'
 import { media } from '../utils/_media-queries'
@@ -21,8 +24,10 @@ const Wrapper = styled.div`
     border-radius: 20px;
   }
   ul {
+    list-style: none;
     padding: 0 0 4em 1em;
   }
+ 
   li {
     // list-style-type: "🎨 ";
     width: 85%;
@@ -32,6 +37,16 @@ const Wrapper = styled.div`
     font-family: ${fonts.$titleFont};
     ${media.mobile`font-size: .9em;`};
     ${media.tablet`font-size: 1em;`};
+  }
+  li::before {
+    content: "• ";
+    color: ${colors.$pinkColor};
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    font-family: ${fonts.$robotoFont};
+    ${media.mobile`font-size: 1em;`};
+    ${media.tablet`font-size: 1.1em;`};
   }
 
   .artistName {
@@ -99,6 +114,13 @@ const Wrapper = styled.div`
     background-size: cover;
     background-position: center;
   }
+  .artwork-box {
+    ${media.mobile`height: 150px; width: 150px;`};
+    ${media.tablet`height: 200px; width: 200px`};
+    margin: 1em auto 1.5em auto;
+    background-size: cover;
+    background-position: center;
+  }
 `
 
 function Result(props) {
@@ -151,6 +173,39 @@ function Result(props) {
           <li>{artist.facts[4]}</li>
         </ul>
         <div styles="padding-bottom: 40px; background: black"></div>
+        <h1 className="title"><span>Artworks</span></h1>
+        <OwlCarousel className="owl-theme" loop margin={20} nav>
+          <div
+            className="artwork-box"
+            style={{
+              "backgroundImage": `url(/image/artworks/${artist.image}00.jpeg)`,
+            }}
+          ></div>
+          <div
+            className="artwork-box"
+            style={{
+              "backgroundImage": `url(/image/artworks/${artist.image}01.jpeg)`,
+            }}
+          ></div>
+          <div
+            className="artwork-box"
+            style={{
+              "backgroundImage": `url(/image/artworks/${artist.image}02.jpeg)`,
+            }}
+          ></div>
+          <div
+            className="artwork-box"
+            style={{
+              "backgroundImage": `url(/image/artworks/${artist.image}03.jpeg)`,
+            }}
+          ></div>
+          <div
+            className="artwork-box"
+            style={{
+              "backgroundImage": `url(/image/artworks/${artist.image}04.jpeg)`,
+            }}
+          ></div>
+        </OwlCarousel>
       </div>
     </Wrapper>
   );
