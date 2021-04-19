@@ -17,6 +17,7 @@ const Wrapper = styled.div`
     color: white;
     ${media.mobile`font-size: 1em`};
     ${media.tablet`font-size: 1.1em`};
+    line-height: 1.5rem;
   }
   h1 span {
     background-color: ${colors.$textColor};
@@ -116,12 +117,35 @@ const Wrapper = styled.div`
   }
   .artwork-box {
     ${media.mobile`height: 150px; width: 150px;`};
-    ${media.tablet`height: 200px; width: 200px`};
+    ${media.tablet`height: 200px; width: 200px;`};
     margin: 1em auto 1.5em auto;
     background-size: cover;
     background-position: center;
   }
 `
+
+const options = {
+  margin: -10,
+  nav: true,
+  dots: true,
+  autoplay: false,
+  // navText: ["Prev", "Next"],
+  smartSpeed: 1000,
+  responsive: {
+      0: {
+          items: 1,
+      },
+      320: {
+        items: 2,
+      },
+      400: {
+          items: 3,
+      },
+      700: {
+          items: 3,
+      }
+  },
+};
 
 function Result(props) {
   var artist;
@@ -174,7 +198,7 @@ function Result(props) {
         </ul>
         <div styles="padding-bottom: 40px; background: black"></div>
         <h1 className="title"><span>Artworks</span></h1>
-        <OwlCarousel className="owl-theme" loop margin={20} nav>
+        <OwlCarousel className="owl-theme" loop="true" responsiveClass="true" {...options}>
           <div
             className="artwork-box"
             style={{
