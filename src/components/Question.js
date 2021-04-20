@@ -7,14 +7,11 @@ import './utils/App.css'
 
 const Wrapper = styled.div`
   position: absolute;
-  width: 80%;
-  // top: 10%;
   left: 0;
   right: 0;
-
+  margin: auto;
   display: flex;
   justify-content: center;
-  margin: auto;
 
   li {
     list-style-type: none;

@@ -28,9 +28,7 @@ const Wrapper = styled.div`
     list-style: none;
     padding: 0 0 4em 1em;
   }
- 
   li {
-    // list-style-type: "🎨 ";
     width: 85%;
     margin: auto;
     color: ${colors.$textColor};
@@ -46,6 +44,7 @@ const Wrapper = styled.div`
     width: 1em;
     margin-left: -1em;
     font-family: ${fonts.$robotoFont};
+    font-weight: 900;
     ${media.mobile`font-size: 1em;`};
     ${media.tablet`font-size: 1.1em;`};
   }
@@ -122,10 +121,12 @@ const Wrapper = styled.div`
     background-size: cover;
     background-position: center;
   }
+  .app-frame {
+    height: auto;
+  }
 `
 
 const options = {
-  margin: -10,
   nav: true,
   dots: true,
   autoplay: false,
@@ -135,21 +136,28 @@ const options = {
       0: {
           items: 1,
       },
-      320: {
+      319: {
         items: 2,
+        margin: 5,
       },
       400: {
           items: 3,
+          margin: 10,
+      },
+      545: {
+        items: 3,
+        margin: 5,
       },
       700: {
           items: 3,
+          margin: 5,
       }
   },
 };
 
 function Result(props) {
   var artist;
-  artist = Artist[0];
+  artist = Artist[5];
   // if (props.resultBriggs === "ESTP" || props.resultBriggs === "ESFP") {
   //     artist = Artist[0];
   // } else if (props.resultBriggs === "ISTJ" || props.resultBriggs === "ISFJ") {
@@ -196,7 +204,7 @@ function Result(props) {
           <li>{artist.facts[3]}</li>
           <li>{artist.facts[4]}</li>
         </ul>
-        <div styles="padding-bottom: 40px; background: black"></div>
+        <div styles="padding-bottom: 40px;"></div>
         <h1 className="title"><span>Artworks</span></h1>
         <OwlCarousel className="owl-theme" loop="true" responsiveClass="true" {...options}>
           <div

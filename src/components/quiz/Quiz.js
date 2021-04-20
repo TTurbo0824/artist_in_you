@@ -4,18 +4,18 @@ import styled from 'styled-components'
 import Question from './Question'
 import QuestionCount from './QuestionCount'
 import AnswerOption from './AnswerOption'
+import '../utils/App.css'
 // import { media } from '../utils/_media-queries'
 
 const Wrapper = styled.div`
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-
   ul {
     display: inline; 
     text-align: center;
     line-height: 100%;
-  }  
+  }
+  .app-frame {
+    height: 100vh;
+  }
 `
 
 const Quiz = props => {

@@ -20,7 +20,7 @@ const Wrapper = styled.div`
     ${media.mobile`font-size: 2em; letter-spacing: 2px;`};
     ${media.tablet`font-size: 2.7em; letter-spacing: 3px;`};
   }
-  
+
   ul {
     display: inline; 
     text-align: center;
@@ -29,6 +29,10 @@ const Wrapper = styled.div`
 
   li {
     list-style-type: none;
+  }
+
+  .app-frame {
+    height: 100vh;
   }
 
   .list-group {
