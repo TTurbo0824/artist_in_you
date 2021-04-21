@@ -3,16 +3,27 @@ import propTypes from 'prop-types'
 import OwlCarousel from "react-owl-carousel"
 import "owl.carousel/dist/assets/owl.carousel.css"
 import "owl.carousel/dist/assets/owl.theme.default.css"
+
+
 import Artist from "./Artist"
 import styled from 'styled-components'
 import { media } from '../utils/_media-queries'
 import { fonts, colors } from '../utils/_var'
 
 const Wrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
   .title {
     margin-bottom: 1.5em;
     font-family: ${fonts.$robotoFont};
     font-size: 2em;
+    font-weight: 400;
     text-align: center;
     color: white;
     ${media.mobile`font-size: 1em`};
@@ -124,13 +135,43 @@ const Wrapper = styled.div`
   .app-frame {
     height: auto;
   }
-`
 
+  .main-content {
+    position: relative;
+    .owl-theme {
+      .custom-nav {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        right: 0;
+        .owl-prev, .owl-next {
+            position: absolute;
+            color: ${colors.$textColor};
+            ${media.mobile`font-size: 2em; height: 75px;`};
+            ${media.tablet`font-size: 3em; height: 100px;`};
+            background: none;
+            border: none;
+            z-index: 100;
+        }
+        .owl-prev, .owl-next:focus {
+          outline: none;
+        }
+        .owl-prev {
+            left: 0;
+        }
+        .owl-next {
+            right: 0;
+        }
+      }
+    }
+  }
+`
 const options = {
   nav: true,
   dots: true,
   autoplay: false,
-  // navText: ["Prev", "Next"],
+  navContainer: '.main-content .custom-nav',
+  // stagePadding: 50,
   smartSpeed: 1000,
   responsive: {
       0: {
@@ -206,38 +247,45 @@ function Result(props) {
         </ul>
         <div styles="padding-bottom: 40px;"></div>
         <h1 className="title"><span>Artworks</span></h1>
-        <OwlCarousel className="owl-theme" loop="true" responsiveClass="true" {...options}>
-          <div
-            className="artwork-box"
-            style={{
-              "backgroundImage": `url(/image/artworks/${artist.image}00.jpeg)`,
-            }}
-          ></div>
-          <div
-            className="artwork-box"
-            style={{
-              "backgroundImage": `url(/image/artworks/${artist.image}01.jpeg)`,
-            }}
-          ></div>
-          <div
-            className="artwork-box"
-            style={{
-              "backgroundImage": `url(/image/artworks/${artist.image}02.jpeg)`,
-            }}
-          ></div>
-          <div
-            className="artwork-box"
-            style={{
-              "backgroundImage": `url(/image/artworks/${artist.image}03.jpeg)`,
-            }}
-          ></div>
-          <div
-            className="artwork-box"
-            style={{
-              "backgroundImage": `url(/image/artworks/${artist.image}04.jpeg)`,
-            }}
-          ></div>
-        </OwlCarousel>
+          <div className="main-content">
+          <OwlCarousel className="owl-theme" loop="true" responsiveClass="true" {...options}>
+            <div
+              className="artwork-box item"
+              style={{
+                "backgroundImage": `url(/image/artworks/${artist.image}00.jpeg)`,
+              }}
+            ></div>
+            <div
+              className="artwork-box item"
+              style={{
+                "backgroundImage": `url(/image/artworks/${artist.image}01.jpeg)`,
+              }}
+            ></div>
+            <div
+              className="artwork-box item"
+              style={{
+                "backgroundImage": `url(/image/artworks/${artist.image}02.jpeg)`,
+              }}
+            ></div>
+            <div
+              className="artwork-box item"
+              style={{
+                "backgroundImage": `url(/image/artworks/${artist.image}03.jpeg)`,
+              }}
+            ></div>
+            <div
+              className="artwork-box item"
+              style={{
+                "backgroundImage": `url(/image/artworks/${artist.image}04.jpeg)`,
+              }}
+            ></div>
+          </OwlCarousel>
+          <div className="owl-theme">
+            <div className="owl-controls">
+                <div className="custom-nav owl-nav"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </Wrapper>
   );
