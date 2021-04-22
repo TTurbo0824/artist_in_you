@@ -3,10 +3,9 @@ import propTypes from 'prop-types'
 import OwlCarousel from "react-owl-carousel"
 import "owl.carousel/dist/assets/owl.carousel.css"
 import "owl.carousel/dist/assets/owl.theme.default.css"
-
-
 import Artist from "./Artist"
 import styled from 'styled-components'
+import '../utils/App.css'
 import { media } from '../utils/_media-queries'
 import { fonts, colors } from '../utils/_var'
 
@@ -37,12 +36,15 @@ const Wrapper = styled.div`
   }
   ul {
     list-style: none;
-    padding: 0 0 4em 1em;
+    padding: 0 0 0 1em;
+    margin-bottom: 4em;
+    background: ${colors.$textColor};
   }
   li {
     width: 85%;
     margin: auto;
-    color: ${colors.$textColor};
+    // color: ${colors.$textColor};
+    color: white;
     line-height: 1.7em;
     font-family: ${fonts.$titleFont};
     ${media.mobile`font-size: .9em;`};
@@ -62,6 +64,7 @@ const Wrapper = styled.div`
 
   .artistName {
     font-family: ${fonts.$mainFont};
+    font-weight: 600;
     text-align: center;
     color: ${colors.$pinkColor};
     ${media.mobile`font-size: 1.5em;`};
@@ -78,11 +81,11 @@ const Wrapper = styled.div`
     margin-bottom: -1em !important;
   }
   .quoteContainer {
-    width: 75%;
+    width: 80%;
     background-color: ${colors.$grayColor};
     border-radius: 15px;
     margin: 0em auto 1em auto;
-    padding: 1em .2em .2em .2em;
+    padding: .8em .2em 1em .2em;
   }
   .quote {
     width: 85%;
@@ -90,7 +93,8 @@ const Wrapper = styled.div`
     margin-right: auto;
     line-height: 1.5rem;
     font-family: Georgia;
-    color: ${colors.$textColor};
+    // color: ${colors.$textColor};
+    color: #404040;
     text-align: center;
     ${media.mobile`font-size: .9em;`};
     ${media.tablet`font-size: 1em;`};
@@ -99,14 +103,15 @@ const Wrapper = styled.div`
     margin-left: auto;
     margin-right: auto;
     font-family: ${fonts.$titleFont};
-    color: ${colors.$textColor};
+    // color: ${colors.$textColor};
+    color: #404040;
     text-align: right;
     text-transform: uppercase;
     ${media.mobile`width: 85%; font-size: .7em;`};
     ${media.tablet`width: 90%; font-size: .8em;`};
   }
   .description {
-    width: 85%;
+    width: 80%;
     height: auto;
     margin: 1.5em auto;
     padding-bottom: 4em;
@@ -116,12 +121,12 @@ const Wrapper = styled.div`
     text-align: left;
     white-space: pre-wrap;
     ${media.mobile`font-size: .9em;`};
-    ${media.tablet`font-size: 1em;`};
+    ${media.tablet`font-size: .95em;`};
   }
   .img-box {
     ${media.mobile`height: 150px; width: 150px;`};
     ${media.tablet`height: 200px; width: 200px`};
-    margin: 1em auto 1.5em auto;
+    margin: 1.5em auto 2.5em auto;
     background-size: cover;
     background-position: center;
   }
@@ -157,21 +162,22 @@ const Wrapper = styled.div`
           outline: none;
         }
         .owl-prev {
-            left: 0;
+            left: .25rem;
         }
         .owl-next {
-            right: 0;
+            right: .25rem;
         }
       }
     }
   }
 `
 const options = {
+  loop: true,
   nav: true,
   dots: true,
   autoplay: false,
   navContainer: '.main-content .custom-nav',
-  // stagePadding: 50,
+  // stagePadding: 5,
   smartSpeed: 1000,
   responsive: {
       0: {
@@ -198,7 +204,7 @@ const options = {
 
 function Result(props) {
   var artist;
-  artist = Artist[5];
+  artist = Artist[1];
   // if (props.resultBriggs === "ESTP" || props.resultBriggs === "ESFP") {
   //     artist = Artist[0];
   // } else if (props.resultBriggs === "ISTJ" || props.resultBriggs === "ISFJ") {
@@ -223,7 +229,7 @@ function Result(props) {
     <Wrapper>
       <div className="app-frame">
         <h1 className="title"><span>the artist in you is</span></h1>
-        <h2 className="display-6 artistName"><b>{artist.artistName}</b></h2>
+        <h2 className="artistName">{artist.artistName}</h2>
         <div
           className="img-box"
           style={{
@@ -248,7 +254,7 @@ function Result(props) {
         <div styles="padding-bottom: 40px;"></div>
         <h1 className="title"><span>Artworks</span></h1>
           <div className="main-content">
-          <OwlCarousel className="owl-theme" loop="true" responsiveClass="true" {...options}>
+          <OwlCarousel className="owl-theme" responsiveClass="true" {...options}>
             <div
               className="artwork-box item"
               style={{
