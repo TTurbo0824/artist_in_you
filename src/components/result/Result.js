@@ -94,7 +94,7 @@ const Wrapper = styled.div`
     line-height: 1.5rem;
     font-family: Georgia;
     // color: ${colors.$textColor};
-    color: #404040;
+    color: #707070;
     text-align: center;
     ${media.mobile`font-size: .9em;`};
     ${media.tablet`font-size: 1em;`};
@@ -104,7 +104,7 @@ const Wrapper = styled.div`
     margin-right: auto;
     font-family: ${fonts.$titleFont};
     // color: ${colors.$textColor};
-    color: #404040;
+    color: #707070;
     text-align: right;
     text-transform: uppercase;
     ${media.mobile`width: 85%; font-size: .7em;`};
