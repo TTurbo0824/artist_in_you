@@ -38,7 +38,7 @@ const Wrapper = styled.div`
     list-style: none;
     padding: 0 0 0 1em;
     margin-bottom: 4em;
-    background: ${colors.$textColor};
+    // background: ${colors.$textColor};
   }
   li {
     width: 85%;
@@ -83,6 +83,13 @@ const Wrapper = styled.div`
   .quoteContainer {
     width: 80%;
     background-color: ${colors.$grayColor};
+    border-radius: 15px;
+    margin: 0em auto 1em auto;
+    padding: .8em .2em 1em .2em;
+  }
+  .factContainer {
+    width: 80%;
+    background-color: ${colors.$textColor};
     border-radius: 15px;
     margin: 0em auto 1em auto;
     padding: .8em .2em 1em .2em;
@@ -244,6 +251,7 @@ function Result(props) {
         </div>
         <p className="description">{artist.description}</p>
         <h1 className="title"><span>Interesting Facts about {artist.artistName}</span></h1>
+        <div className="factContainer">
         <ul>
           <li>{artist.facts[0]}</li>
           <li>{artist.facts[1]}</li>
@@ -251,6 +259,7 @@ function Result(props) {
           <li>{artist.facts[3]}</li>
           <li>{artist.facts[4]}</li>
         </ul>
+        </div>
         <div styles="padding-bottom: 40px;"></div>
         <h1 className="title"><span>Artworks</span></h1>
           <div className="main-content">
