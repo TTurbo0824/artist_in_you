@@ -1,9 +1,10 @@
-import React from 'react'
-import propTypes from 'prop-types'
-import styled from 'styled-components'
-import '../utils/App.css'
-import { fonts, colors } from '../utils/_var'
-import { media } from '../utils/_media-queries'
+import React from 'react';
+import propTypes from 'prop-types';
+import styled from 'styled-components';
+import '../utils/App.css';
+// import { fonts, colors } from '../utils/_var';
+import { colors } from '../utils/_var';
+import { media } from '../utils/_media-queries';
 
 const Wrapper = styled.div`
   li {
@@ -12,19 +13,16 @@ const Wrapper = styled.div`
   .answerOption {
     font-family: 'Roboto';
   }
-
   .answerOptionButton {
       position: absolute;
       width: auto;
       opacity: 0;
   }
-
   .answerOptionButton,
   .answerOptionLabel {
       display: flex;
       cursor: pointer;
   }
-  
   .answerOptionLabel {
     position: relative;
     margin-left: auto;
@@ -37,7 +35,6 @@ const Wrapper = styled.div`
     ${media.mobile`font-size: 1em; padding: 1rem 2rem 1rem 2rem;`};
     ${media.tablet`font-size: 1.25em; padding: 1.75rem 4rem 1.75rem 4rem;`};
   }
-
   .answerOptionLabel:active {
     background-color: ${colors.$pinkColor};
   }

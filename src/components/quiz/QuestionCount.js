@@ -1,9 +1,9 @@
-import React from 'react'
-import propTypes from 'prop-types'
-import styled from 'styled-components'
-import '../utils/App.css'
-import { media } from '../utils/_media-queries'
-import { fonts, colors } from '../utils/_var'
+import React from 'react';
+import propTypes from 'prop-types';
+import styled from 'styled-components';
+import '../utils/App.css';
+import { media } from '../utils/_media-queries';
+import { fonts, colors } from '../utils/_var';
 
 const Wrapper = styled.div`
   margin: 1em 2em;

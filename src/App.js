@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import Intro from './components/Intro'
-import Question from './components/Question'
+import React, { Component } from 'react';
+import Intro from './components/Intro';
+import Question from './components/Question';
 
 class App extends Component {
   constructor(props) {

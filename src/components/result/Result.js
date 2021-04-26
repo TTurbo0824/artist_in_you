@@ -1,13 +1,13 @@
-import React from 'react'
-import propTypes from 'prop-types'
-import OwlCarousel from "react-owl-carousel"
-import "owl.carousel/dist/assets/owl.carousel.css"
-import "owl.carousel/dist/assets/owl.theme.default.css"
-import Artist from "./Artist"
-import styled from 'styled-components'
-import '../utils/App.css'
-import { media } from '../utils/_media-queries'
-import { fonts, colors } from '../utils/_var'
+import React from 'react';
+import propTypes from 'prop-types';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import Artist from './Artist';
+import styled from 'styled-components';
+import '../utils/App.css';
+import { media } from '../utils/_media-queries';
+import { fonts, colors } from '../utils/_var';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -61,7 +61,6 @@ const Wrapper = styled.div`
     ${media.mobile`font-size: 1em;`};
     ${media.tablet`font-size: 1.1em;`};
   }
-
   .artistName {
     font-family: ${fonts.$mainFont};
     font-weight: 600;
@@ -240,7 +239,7 @@ function Result(props) {
         <div
           className="img-box"
           style={{
-            "backgroundImage": `url(/artist_in_you/image/${artist.image}.jpeg)`,
+            "backgroundImage": `url(/artist_in_you/images/${artist.image}.jpeg)`,
           }}
         ></div>
         {/* <hr className="my-4" /> */}
@@ -267,31 +266,31 @@ function Result(props) {
             <div
               className="artwork-box item"
               style={{
-                "backgroundImage": `url(/artist_in_you/image/artworks/${artist.image}00.jpeg)`,
+                "backgroundImage": `url(/artist_in_you/images/artworks/${artist.image}00.jpeg)`,
               }}
             ></div>
             <div
               className="artwork-box item"
               style={{
-                "backgroundImage": `url(/artist_in_you/image/artworks/${artist.image}01.jpeg)`,
+                "backgroundImage": `url(/artist_in_you/images/artworks/${artist.image}01.jpeg)`,
               }}
             ></div>
             <div
               className="artwork-box item"
               style={{
-                "backgroundImage": `url(/artist_in_you/image/artworks/${artist.image}02.jpeg)`,
+                "backgroundImage": `url(/artist_in_you/images/artworks/${artist.image}02.jpeg)`,
               }}
             ></div>
             <div
               className="artwork-box item"
               style={{
-                "backgroundImage": `url(/artist_in_you/image/artworks/${artist.image}03.jpeg)`,
+                "backgroundImage": `url(/artist_in_you/images/artworks/${artist.image}03.jpeg)`,
               }}
             ></div>
             <div
               className="artwork-box item"
               style={{
-                "backgroundImage": `url(/artist_in_you/image/artworks/${artist.image}04.jpeg)`,
+                "backgroundImage": `url(/artist_in_you/images/artworks/${artist.image}04.jpeg)`,
               }}
             ></div>
           </OwlCarousel>

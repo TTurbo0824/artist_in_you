@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import styled from 'styled-components'
-import Quiz from '../components/quiz/Quiz'
-import Result from '../components/result/Result'
-import quizQuestions from '../api/quizQuestions'
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Quiz from '../components/quiz/Quiz';
+import Result from '../components/result/Result';
+import quizQuestions from '../api/quizQuestions';
 import './utils/App.css'
 
 const Wrapper = styled.div`

@@ -1,9 +1,9 @@
-import React from 'react'
-import propTypes from 'prop-types'
-import styled from 'styled-components'
-import Question from './Question'
-import QuestionCount from './QuestionCount'
-import AnswerOption from './AnswerOption'
+import React from 'react';
+import propTypes from 'prop-types';
+import styled from 'styled-components';
+import Question from './Question';
+import QuestionCount from './QuestionCount';
+import AnswerOption from './AnswerOption';
 import '../utils/App.css'
 // import { media } from '../utils/_media-queries'
 
