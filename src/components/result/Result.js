@@ -240,7 +240,7 @@ function Result(props) {
         <div
           className="img-box"
           style={{
-            "backgroundImage": `url(/image/${artist.image}.jpeg)`,
+            "backgroundImage": `url(/artist_in_you/image/${artist.image}.jpeg)`,
           }}
         ></div>
         {/* <hr className="my-4" /> */}
@@ -267,31 +267,31 @@ function Result(props) {
             <div
               className="artwork-box item"
               style={{
-                "backgroundImage": `url(/image/artworks/${artist.image}00.jpeg)`,
+                "backgroundImage": `url(/artist_in_you/image/artworks/${artist.image}00.jpeg)`,
               }}
             ></div>
             <div
               className="artwork-box item"
               style={{
-                "backgroundImage": `url(/image/artworks/${artist.image}01.jpeg)`,
+                "backgroundImage": `url(/artist_in_you/image/artworks/${artist.image}01.jpeg)`,
               }}
             ></div>
             <div
               className="artwork-box item"
               style={{
-                "backgroundImage": `url(/image/artworks/${artist.image}02.jpeg)`,
+                "backgroundImage": `url(/artist_in_you/image/artworks/${artist.image}02.jpeg)`,
               }}
             ></div>
             <div
               className="artwork-box item"
               style={{
-                "backgroundImage": `url(/image/artworks/${artist.image}03.jpeg)`,
+                "backgroundImage": `url(/artist_in_you/image/artworks/${artist.image}03.jpeg)`,
               }}
             ></div>
             <div
               className="artwork-box item"
               style={{
-                "backgroundImage": `url(/image/artworks/${artist.image}04.jpeg)`,
+                "backgroundImage": `url(/artist_in_you/image/artworks/${artist.image}04.jpeg)`,
               }}
             ></div>
           </OwlCarousel>
