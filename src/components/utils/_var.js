@@ -13,8 +13,8 @@ const colors = {
   $textColor: "#323657",
   // $pinkColor: '#ff93ac',
   $pinkColor: '#ec628d',
-  // $grayColor: '#e5e4e2'
-  $grayColor: '#e7e8e9'
+  // $grayColor: '#e7e8e9'
+  $grayColor: '#f2f2f2'
 }
 
 export { fonts, colors }

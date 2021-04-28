@@ -21,6 +21,8 @@ const Wrapper = styled.div`
   .title {
     margin-bottom: 1.5em;
     font-family: ${fonts.$robotoFont};
+    font-family: Ubuntu;
+    text-transform: lowercase;
     font-size: 2em;
     font-weight: 400;
     text-align: center;
@@ -36,19 +38,20 @@ const Wrapper = styled.div`
   }
   ul {
     list-style: none;
-    padding: 0 0 0 1em;
-    margin-bottom: 4em;
+    padding: 0 0 0 .3em;
+    margin-bottom: 2.2em;
     // background: ${colors.$textColor};
   }
   li {
     width: 85%;
     margin: auto;
-    // color: ${colors.$textColor};
+    color: ${colors.$textColor};
     color: white;
-    line-height: 1.7em;
+    line-height: 1.5em;
+    margin-bottom: .8em;
     font-family: ${fonts.$titleFont};
     ${media.mobile`font-size: .9em;`};
-    ${media.tablet`font-size: 1em;`};
+    ${media.tablet`font-size: .95em;`};
   }
   li::before {
     content: "• ";
@@ -71,39 +74,47 @@ const Wrapper = styled.div`
     margin-bottom: .75em;
   }
   .my-4 {
-    width: 60%;
-    ${media.tablet`width: 40%;`};
-    ${media.laptop`width: 25%;`};
+    // width: 30%;
+    // ${media.mobile`width: 25%;`};
+    // ${media.tablet`width: 25%;`};
+    ${media.mobile`margin: 2.5em auto 2em auto;`};
+    ${media.tablet`margin: -1em auto 3em auto;`};
+    // border: 2px dotted #53567f;
+    // border-style: inset;
   }
   .my-5 {
     width: 0;
     margin-bottom: -1em !important;
   }
   .quoteContainer {
-    width: 80%;
+    width: 75%;
+    background-color: none;
     background-color: ${colors.$grayColor};
     border-radius: 15px;
-    margin: 0em auto 1em auto;
-    padding: .8em .2em 1em .2em;
+    ${media.mobile`margin: 2.3em auto 2.1em auto; padding: .3em .2em .8em .2em;`};
+    ${media.tablet`margin: 2.7em auto 3.8em auto; padding: .8em .2em 1.1em .2em;`};
   }
   .factContainer {
     width: 80%;
-    background-color: ${colors.$textColor};
+    background-color: #53567f;
+    // background-color: ${colors.$textColor};
+    // background-color: #ffebef;
     border-radius: 15px;
-    margin: 0em auto 1em auto;
-    padding: .8em .2em 1em .2em;
+    margin: 2.2em auto 4em auto;
+    padding: .8em .2em .1em .2em;
   }
   .quote {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.5rem;
-    font-family: Georgia;
+    margin-bottom: 1.3em;
+    line-height: 1.7em;
+    font-family: Ubuntu;
     // color: ${colors.$textColor};
     color: #707070;
     text-align: center;
-    ${media.mobile`font-size: .9em;`};
-    ${media.tablet`font-size: 1em;`};
+    ${media.mobile`font-size: .8em;`};
+    ${media.tablet`font-size: .95em;`};
   }
   .date {
     margin-left: auto;
@@ -112,9 +123,17 @@ const Wrapper = styled.div`
     // color: ${colors.$textColor};
     color: #707070;
     text-align: right;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     ${media.mobile`width: 85%; font-size: .7em;`};
     ${media.tablet`width: 90%; font-size: .8em;`};
+  }
+  .break {
+    ${media.mobile`margin: 2.5em auto 2em 1.2em;`};
+    ${media.tablet`margin: -.9em auto 1.8em 1em;`};
+    text-align: center;
+    color: #535994;
+    ${media.mobile`font-size: 1em; letter-spacing: 18px;`};
+    ${media.tablet`font-size: 1.3em; letter-spacing: 20px;`};
   }
   .description {
     width: 80%;
@@ -126,15 +145,18 @@ const Wrapper = styled.div`
     color: ${colors.$textColor};
     text-align: left;
     white-space: pre-wrap;
+    word-break: break-all;
+    // hyphens: auto;
     ${media.mobile`font-size: .9em;`};
     ${media.tablet`font-size: .95em;`};
   }
   .img-box {
     ${media.mobile`height: 150px; width: 150px;`};
     ${media.tablet`height: 200px; width: 200px`};
-    margin: 1.5em auto 2.5em auto;
+    margin: 1.4em auto 1.5em auto;
     background-size: cover;
     background-position: center;
+    // border-radius: 50%;
   }
   .artwork-box {
     ${media.mobile`height: 150px; width: 150px;`};
@@ -242,14 +264,14 @@ function Result(props) {
             "backgroundImage": `url(/artist_in_you/images/${artist.image}.jpeg)`,
           }}
         ></div>
-        {/* <hr className="my-4" /> */}
-        {/* <hr className="my-5" /> */}
         <div className="quoteContainer">
           <p className="quote"><i>"{artist.quote}"</i></p>
           <p className="date">{artist.date}</p>
         </div>
+        {/* <hr className="my-4" /> */}
+        <p className="break">•••</p>
         <p className="description">{artist.description}</p>
-        <h1 className="title"><span>Interesting Facts about {artist.artistName}</span></h1>
+        <h1 className="title"><span>Interesting Facts about the Artist</span></h1>
         <div className="factContainer">
         <ul>
           <li>{artist.facts[0]}</li>
@@ -260,7 +282,7 @@ function Result(props) {
         </ul>
         </div>
         <div styles="padding-bottom: 40px;"></div>
-        <h1 className="title"><span>Artworks</span></h1>
+        <h1 className="title"><span>Famous Artworks by the Artist</span></h1>
           <div className="main-content">
           <OwlCarousel className="owl-theme" responsiveClass="true" {...options}>
             <div
