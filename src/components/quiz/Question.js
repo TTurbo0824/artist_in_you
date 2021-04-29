@@ -5,19 +5,25 @@ import '../utils/App.css';
 import { media } from '../utils/_media-queries';
 import { fonts, colors } from '../utils/_var';
 
-const Wrapper = styled.div`
+const Wrapper = styled.div`    
   .row {
-    ${media.mobile`margin-top: 3rem; margin-bottom: 0.5rem;`};
-    ${media.tablet`margin-top: 4.5rem; margin-bottom: 2rem;`};
+    ${media.mobile`margin-top: 3rem; margin-bottom: -1.5rem;`};
+    ${media.tablet`margin-top: 4.5rem; margin-bottom: 0rem;`};
     .col {
       padding: 0 3rem;
       h1 {
+        color: ${colors.$textColor};
         font-family: ${fonts.$titleFont};
         ${media.mobile`font-size: 1rem;`};
         ${media.tablet`font-size: 1.1rem;`};
-        color: ${colors.$textColor};
         text-align: left;
         line-height: 1.7em;
+      }
+      h2 {
+        color: gray;
+        color: transparent;
+        font-size: 1rem;
+        line-height: 0;
       }
     }
   }
@@ -29,8 +35,10 @@ const Question = props => {
       <div className="row">
         <div className="col">
           <h1><b>{props.content}</b></h1>
+          <h2>this is just a empty content. this is just a empty content. this is just a empty content.</h2>
         </div>
       </div>
+     
     </Wrapper>
   )
 }

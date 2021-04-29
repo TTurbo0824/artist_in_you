@@ -26,7 +26,6 @@ const Wrapper = styled.div`
   ul {
     display: inline; 
     text-align: center;
-    line-height: 100%;
   }
   li {
     list-style-type: none;
@@ -38,17 +37,19 @@ const Wrapper = styled.div`
     .list-item {
       background: transparent;
       padding: 1em 1.25em;
+      margin: auto;
       font-family: ${fonts.$titleFont};
+      font-family: Titillium Web;
+      letter-spacing: .8px;
       border: 0;
       color: ${colors.$textColor};
-      // color: ${colors.$pinkColor};
-      ${media.mobile`font-size: 1em`};
-      ${media.tablet`font-size: 1.15em`};
+      ${media.mobile`font-size: 1em; width: 80%`};
+      ${media.tablet`font-size: 1.1em;`};
       text-align: center;
     }
   }
   .img-box {
-    ${media.mobile`height: 300px; width: 300px; margin: 0.8em auto 1.2em auto;`};
+    ${media.mobile`height: 300px; width: 300px; margin: 0.2em auto 1.2em auto;`};
     ${media.tablet`height: 410px; width: 400px; margin: 0.4em auto -0.5em auto;`};
     background-size: cover;
     background-position: center;
@@ -61,7 +62,7 @@ const Intro = ({ title, _onStartClick }) => {
       <div className="app-frame">
         <h1>{title}</h1>
         <ul className="list-group">
-          <li className="list-item">Find out which artist you are most like.</li>
+          <li className="list-item">Let's find out which artist you are most like!</li>
         </ul>
         <div
           className="img-box"

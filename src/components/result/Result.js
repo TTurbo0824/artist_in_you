@@ -18,6 +18,9 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
 
+  .app-frame {
+    height: auto;
+  }
   .title {
     margin-bottom: 1.5em;
     font-family: ${fonts.$robotoFont};
@@ -45,24 +48,24 @@ const Wrapper = styled.div`
   li {
     width: 85%;
     margin: auto;
-    color: ${colors.$textColor};
-    color: white;
-    line-height: 1.5em;
-    margin-bottom: .8em;
+    // color: #707070;
+    color: #555555;
+    margin-bottom: 1em;
     font-family: ${fonts.$titleFont};
-    ${media.mobile`font-size: .9em;`};
-    ${media.tablet`font-size: .95em;`};
+    ${media.mobile`font-size: .9em; line-height: 1.4em;`};
+    ${media.tablet`font-size: .95em; line-height: 1.5em;`};
   }
   li::before {
-    content: "• ";
-    color: ${colors.$pinkColor};
+    content: "•";
+    // color: ${colors.$textColor};
+    color: #535994;
     display: inline-block; 
     width: 1em;
     margin-left: -1em;
     font-family: ${fonts.$robotoFont};
     font-weight: 900;
     ${media.mobile`font-size: 1em;`};
-    ${media.tablet`font-size: 1.1em;`};
+    ${media.tablet`font-size: 1.2em;`};
   }
   .artistName {
     font-family: ${fonts.$mainFont};
@@ -73,35 +76,20 @@ const Wrapper = styled.div`
     ${media.tablet`font-size: 1.8em;`};
     margin-bottom: .75em;
   }
-  .my-4 {
-    // width: 30%;
-    // ${media.mobile`width: 25%;`};
-    // ${media.tablet`width: 25%;`};
-    ${media.mobile`margin: 2.5em auto 2em auto;`};
-    ${media.tablet`margin: -1em auto 3em auto;`};
-    // border: 2px dotted #53567f;
-    // border-style: inset;
-  }
-  .my-5 {
-    width: 0;
-    margin-bottom: -1em !important;
-  }
   .quoteContainer {
-    width: 75%;
-    background-color: none;
-    background-color: ${colors.$grayColor};
-    border-radius: 15px;
+    width: 80%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
     ${media.mobile`margin: 2.3em auto 2.1em auto; padding: .3em .2em .8em .2em;`};
-    ${media.tablet`margin: 2.7em auto 3.8em auto; padding: .8em .2em 1.1em .2em;`};
+    ${media.tablet`margin: 2.4em auto 3.8em auto; padding: .8em .2em 1.1em .2em;`};
   }
   .factContainer {
     width: 80%;
-    background-color: #53567f;
-    // background-color: ${colors.$textColor};
-    // background-color: #ffebef;
-    border-radius: 15px;
-    margin: 2.2em auto 4em auto;
-    padding: .8em .2em .1em .2em;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    ${media.mobile`margin: 2.4em auto 4.5em auto;`};
+    ${media.tablet`margin: 2.5em auto 4.8em auto;`};
+    padding: .8em .2em .1em .2em
   }
   .quote {
     width: 85%;
@@ -110,8 +98,7 @@ const Wrapper = styled.div`
     margin-bottom: 1.3em;
     line-height: 1.7em;
     font-family: Ubuntu;
-    // color: ${colors.$textColor};
-    color: #707070;
+    color: ${colors.$grayColor};
     text-align: center;
     ${media.mobile`font-size: .8em;`};
     ${media.tablet`font-size: .95em;`};
@@ -120,25 +107,23 @@ const Wrapper = styled.div`
     margin-left: auto;
     margin-right: auto;
     font-family: ${fonts.$titleFont};
-    // color: ${colors.$textColor};
-    color: #707070;
+    color: ${colors.$grayColor};
     text-align: right;
-    // text-transform: uppercase;
     ${media.mobile`width: 85%; font-size: .7em;`};
     ${media.tablet`width: 90%; font-size: .8em;`};
   }
   .break {
-    ${media.mobile`margin: 2.5em auto 2em 1.2em;`};
-    ${media.tablet`margin: -.9em auto 1.8em 1em;`};
+    ${media.mobile`margin: 2.3em auto 2em 1.2em;`};
+    ${media.tablet`margin: -.8em auto 1.7em 1em;`};
     text-align: center;
     color: #535994;
-    ${media.mobile`font-size: 1em; letter-spacing: 18px;`};
-    ${media.tablet`font-size: 1.3em; letter-spacing: 20px;`};
+    ${media.mobile`font-size: 1em; letter-spacing: 16px;`};
+    ${media.tablet`font-size: 1.3em; letter-spacing: 18px;`};
   }
   .description {
     width: 80%;
     height: auto;
-    margin: 1.5em auto;
+    margin: 1.5em auto auto auto;
     padding-bottom: 4em;
     line-height: 1.7em;
     font-family: ${fonts.$titleFont};
@@ -146,7 +131,7 @@ const Wrapper = styled.div`
     text-align: left;
     white-space: pre-wrap;
     word-break: break-all;
-    // hyphens: auto;
+    hyphens: auto;
     ${media.mobile`font-size: .9em;`};
     ${media.tablet`font-size: .95em;`};
   }
@@ -156,7 +141,6 @@ const Wrapper = styled.div`
     margin: 1.4em auto 1.5em auto;
     background-size: cover;
     background-position: center;
-    // border-radius: 50%;
   }
   .artwork-box {
     ${media.mobile`height: 150px; width: 150px;`};
@@ -165,12 +149,9 @@ const Wrapper = styled.div`
     background-size: cover;
     background-position: center;
   }
-  .app-frame {
-    height: auto;
-  }
-
   .main-content {
     position: relative;
+    margin-bottom: 2em;
     .owl-theme {
       .custom-nav {
         position: absolute;
@@ -232,24 +213,24 @@ const options = {
 
 function Result(props) {
   var artist;
-  artist = Artist[1];
-  // if (props.resultBriggs === "ESTP" || props.resultBriggs === "ESFP") {
-  //     artist = Artist[0];
-  // } else if (props.resultBriggs === "ISTJ" || props.resultBriggs === "ISFJ") {
-  //     artist = Artist[1];
-  // } else if (props.resultBriggs === "ENTJ" || props.resultBriggs === "ESTJ") {
-  //     artist = Artist[2];
-  // } else if (props.resultBriggs === "INTP" || props.resultBriggs === "ISTP") {
-  //     artist = Artist[3];
-  // } else if (props.resultBriggs === "ENTP" || props.resultBriggs === "ENFP"){ 
-  //     artist = Artist[4];
-  // } else if (props.resultBriggs === "INTJ" || props.resultBriggs === "INFJ") {
-  //     artist = Artist[5];
-  // } else if (props.resultBriggs === "ENFJ" || props.resultBriggs === "ESFJ") {
-  //     artist = Artist[6];
-  // } else if (props.resultBriggs === "INFP" || props.resultBriggs === "ISFP") {
-  //     artist = Artist[7];
-  // }
+  // artist = Artist[2];
+  if (props.resultBriggs === "ESTP" || props.resultBriggs === "ESFP") {
+      artist = Artist[0];
+  } else if (props.resultBriggs === "ISTJ" || props.resultBriggs === "ISFJ") {
+      artist = Artist[1];
+  } else if (props.resultBriggs === "ENTJ" || props.resultBriggs === "ESTJ") {
+      artist = Artist[2];
+  } else if (props.resultBriggs === "INTP" || props.resultBriggs === "ISTP") {
+      artist = Artist[3];
+  } else if (props.resultBriggs === "ENTP" || props.resultBriggs === "ENFP"){ 
+      artist = Artist[4];
+  } else if (props.resultBriggs === "INTJ" || props.resultBriggs === "INFJ") {
+      artist = Artist[5];
+  } else if (props.resultBriggs === "ENFJ" || props.resultBriggs === "ESFJ") {
+      artist = Artist[6];
+  } else if (props.resultBriggs === "INFP" || props.resultBriggs === "ISFP") {
+      artist = Artist[7];
+  }
   
   console.log(props.resultBriggs);
 
@@ -268,7 +249,6 @@ function Result(props) {
           <p className="quote"><i>"{artist.quote}"</i></p>
           <p className="date">{artist.date}</p>
         </div>
-        {/* <hr className="my-4" /> */}
         <p className="break">•••</p>
         <p className="description">{artist.description}</p>
         <h1 className="title"><span>Interesting Facts about the Artist</span></h1>

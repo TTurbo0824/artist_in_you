@@ -5,9 +5,13 @@ import Question from './Question';
 import QuestionCount from './QuestionCount';
 import AnswerOption from './AnswerOption';
 import '../utils/App.css'
-// import { media } from '../utils/_media-queries'
 
 const Wrapper = styled.div`
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto; 
+
   ul {
     display: inline; 
     text-align: center;

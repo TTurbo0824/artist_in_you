@@ -31,22 +31,22 @@ class Question extends Component {
       answerOptions: [],
       answer: '',
       answersCount: {
-        // Briggs: {
-        //   E: 2,
-        //   I: 1,
-        //   S: 2,
-        //   N: 1,
-        //   T: 2,
-        //   F: 1,
-        //   J: 1,
-        //   P: 2
-        // }
         Briggs: {
+          E: 2,
           I: 1,
-          S: 1,
-          T: 1,
+          S: 2,
+          N: 1,
+          T: 2,
+          F: 1,
           J: 1,
+          P: 2
         }
+        // Briggs: {
+        //   I: 1,
+        //   S: 1,
+        //   T: 1,
+        //   J: 1,
+        // }
       },
       resultBriggs: ''
     }

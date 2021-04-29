@@ -26,7 +26,7 @@ const Wrapper = styled.div`
     text-align: right;
     font-family: ${fonts.$titleFont};
     font-size: .8em;
-    color: ${colors.$textColor};
+    color: ${colors.$grayColor};
     ${media.mobile`font-size: .75em;`};
     ${media.tablet`font-size: .9em;`};
   }
