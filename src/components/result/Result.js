@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import '../utils/App.css';
 import { media } from '../utils/_media-queries';
 import { fonts, colors } from '../utils/_var';
+import ImageComponent from "../utils/ImageComponent";
 
 const Wrapper = styled.div`
   position: absolute;
@@ -302,6 +303,7 @@ function Result(props) {
             </div>
           </div>
         </div>
+        <ImageComponent />
       </div>
     </Wrapper>
   );
