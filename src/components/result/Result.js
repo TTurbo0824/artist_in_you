@@ -1,14 +1,15 @@
 import React from 'react';
+// import ReactDOM from "react-dom";
 import propTypes from 'prop-types';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import ImageZoom from 'react-medium-image-zoom';
 import Artist from './Artist';
 import styled from 'styled-components';
 import '../utils/App.css';
 import { media } from '../utils/_media-queries';
 import { fonts, colors } from '../utils/_var';
-import ImageComponent from "../utils/ImageComponent";
 
 const Wrapper = styled.div`
   position: absolute;
@@ -303,7 +304,22 @@ function Result(props) {
             </div>
           </div>
         </div>
-        <ImageComponent />
+        <ImageZoom
+          shouldReplaceImage={false}
+          image={{
+            src: `/artist_in_you/images/artworks/${artist.image}00.jpeg`,
+            alt: 'normal',
+            // className: 'artwork-box',
+            style: { width: '200px', height: '200px' }
+            
+          }}
+          zoomImage={{
+            src: `/artist_in_you/images/artworks/big/${artist.image}00_big.jpeg`,
+            alt: 'big',
+            style: { width: '100%', height: '100%' }
+
+          }}
+      />
       </div>
     </Wrapper>
   );
