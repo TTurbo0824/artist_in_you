@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import ImageZoom from 'react-medium-image-zoom';
+// import ImageZoom from 'react-medium-image-zoom';
 import Artist from './Artist';
 import styled from 'styled-components';
 import '../utils/App.css';
@@ -304,7 +304,7 @@ function Result(props) {
             </div>
           </div>
         </div>
-        <ImageZoom
+        {/* <ImageZoom
           shouldReplaceImage={false}
           image={{
             src: `/artist_in_you/images/artworks/${artist.image}00.jpeg`,
@@ -319,7 +319,7 @@ function Result(props) {
             style: { width: '100%', height: '100%' }
 
           }}
-      />
+      /> */}
       </div>
     </Wrapper>
   );

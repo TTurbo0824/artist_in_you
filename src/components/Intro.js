@@ -40,7 +40,7 @@ const Wrapper = styled.div`
       margin: auto;
       font-family: ${fonts.$titleFont};
       font-family: Titillium Web;
-      letter-spacing: .8px;
+      letter-spacing: .5px;
       border: 0;
       color: ${colors.$textColor};
       ${media.mobile`font-size: 1em; width: 80%`};

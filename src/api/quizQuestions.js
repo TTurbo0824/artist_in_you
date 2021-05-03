@@ -66,29 +66,29 @@
 var quizQuestions = [
   // question #1
   {
-    question: "Do you like going to art exhibitions?",
+ question: "If you hang a painting in your room, you want that painting to be",
     answers: [
       {
         type: 'S',
-        content: "I love it! (S)"
+        content: "Something pretty and simple, so I can hang it anywhere."
       },
       {
         type: 'S, No',
-        content: "Nah, I don't really care about art. (N)"
+        content: "Intense, offering me something to think about."
       }
     ]
   },
   // question #2
   {
-    question: "If you hang a painting in your room, you want that painting to be",
+    question: "Your nephew just gave his drawing to you. And you will say",
     answers: [
       {
         type: 'F',
-        content: "Intense, offering me something to think about. (F)"
+        content: '"I really like this area right here. Did you use pastel?"'
       },
       {
         type: 'F, No',
-        content: "Something pretty, so I can hang it anywhere. (T)"
+        content: '"Did you draw this for me? You did a real good job!"'
       }
     ]
   },
@@ -98,12 +98,12 @@ var quizQuestions = [
     answers: [
       {
         type: 'J',
-        content: "I will check the schedule right away and visit there as soon as possible. (J)"
+        content: "I will check the schedule right away and visit there as soon as possible."
       },
 
       {
         type: 'J, No',
-        content: "Cool, I will go there if I get a chance. (P)"
+        content: "Cool, I will go there if I get a chance."
       }
     ]
   },
@@ -113,11 +113,11 @@ var quizQuestions = [
     answers: [
       {
         type: 'T',
-        content: "Google the artist's info and famous works in advance. (T)"
+        content: "Google the artist's info and famous works in advance."
       },
       {
         type: 'T, No',
-        content: "Do nothing. I want to get a fresh impression. (F)"
+        content: "Do nothing. I want to get a fresh impression."
       }
     ]
   },
@@ -127,12 +127,12 @@ var quizQuestions = [
     answers: [
       {
         type: 'E',
-        content: "Everything is better with friends! I'll reschedule our date. (E)"
+        content: "Everything is better with friends! I'll reschedule our date."
       },
 
       {
         type: 'E, No',
-        content: "I prefer going to exhibitions alone anyway. I will visit there as planned. (I)"
+        content: "I prefer going to exhibitions alone anyway. I will visit there as planned."
       }
     ]
   },
@@ -142,12 +142,12 @@ var quizQuestions = [
     answers: [
       {
         type: 'N',
-        content: "Even better! I've always loved trying new technologies. (N)"
+        content: "Even better! I've always loved trying new technologies."
       },
 
       {
         type: 'N, No',
-        content: "Can it really replace reality? I'd rather go there and see it for myself. (S)"
+        content: "Can it really replace reality? I'd rather go there and see it for myself."
       }
     ]
   },
@@ -157,12 +157,12 @@ var quizQuestions = [
     answers: [
       {
         type: 'P',
-        content: "Walking around isn't on my to-do list. I will go straight to the art museum. (P)"
+        content: "Walking around isn't on my to-do list. I will go straight to the art museum."
       },
 
       {
         type: 'P, No',
-        content: "I still have time to spare. I will look around and take a different route. (J)"
+        content: "I still have time to spare. I will look around and take a different route."
       }
     ]
   },
@@ -172,12 +172,12 @@ var quizQuestions = [
     answers: [
       {
         type: 'E',
-        content: "What good timing! I will blend in with the group right away. (E)"
+        content: "What good timing! I will blend in with the group right away."
       },
 
       {
         type: 'E, No',
-        content: "Why now? I hate being around people. I will stay away from the group. (I)"
+        content: "Why now? I hate being around people. I will stay away from the group."
       }
     ]
   },
@@ -187,11 +187,11 @@ var quizQuestions = [
     answers: [
       {
         type: 'J',
-        content: "Quickly take notes of the artist and title of the painting, and move on to the next painting. (J)"
+        content: "Quickly take notes on the painting, and move on to the next painting."
       },
       {
         type: 'J, No',
-        content: "Stand there for a while to appreciate the painting. I want to cherish the moment. (P)"
+        content: "Stand there for a while to appreciate the painting. I want to cherish the moment."
       }
     ]
   },
@@ -201,11 +201,11 @@ var quizQuestions = [
     answers: [
       {
         type: 'T',
-        content: "The staff will take care of it. I will just go my way. (T)"
+        content: "The staff will take care of it. I will just go my way."
       },
       {
         type: 'T, No',
-        content: "I will politely stop them and say taking pictures is prohibited. (F)"
+        content: "I will politely stop them and say taking pictures is prohibited."
       }
     ]
   },
@@ -215,12 +215,12 @@ var quizQuestions = [
     answers: [
       {
         type: 'S',
-        content: "based on the facts, like featured artists, how many artworks were displayed, or how crowded the museum was. (S)"
+        content: "Based on the facts, like featured artists, how many artworks were displayed, or how crowded the museum was."
       },
 
       {
         type: 'S, No',
-        content: "based on my impressions on specific things, like the way I felt in front of my favorite painting. (N)"
+        content: "Based on my impressions on specific things, like the way I felt in front of my favorite painting."
       }
     ]
   },
@@ -230,11 +230,11 @@ var quizQuestions = [
     answers: [
       {
         type: 'I',
-        content: "I will proudly say that I didn't enjoy the exhibition and tell them why. (I)"
+        content: "I will proudly say that I didn't enjoy the exhibition and tell them why."
       },
       {
         type: 'I, No',
-        content: "Just say it was good so I don't have to go against my friends. (E)"
+        content: "Just say it was good so I don't have to go against my friends."
       }
     ]
   }

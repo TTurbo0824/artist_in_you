@@ -41,6 +41,7 @@ class Question extends Component {
           J: 1,
           P: 2
         }
+        // // test
         // Briggs: {
         //   I: 1,
         //   S: 1,

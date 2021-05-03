@@ -11,7 +11,7 @@ const Wrapper = styled.div`
     list-style-type: none;
   }
   .answerOption {
-    font-family: 'Roboto';
+    font-family: Poppins;
   }
   .answerOptionButton {
       position: absolute;
@@ -20,20 +20,18 @@ const Wrapper = styled.div`
   }
   .answerOptionButton,
   .answerOptionLabel {
-      display: flex;
-      cursor: pointer;
+    display: flex;
+    cursor: pointer;
   }
   .answerOptionLabel {
     position: relative;
-    margin-left: auto;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin: 20px auto 10px auto;
     color: #fff;
-    line-height: 1.5rem;
     background-color: ${colors.$textColor};
     border-radius: 5px;
-    ${media.mobile`font-size: 1em; padding: 1rem 2rem 1rem 2rem;`};
-    ${media.tablet`font-size: 1.25em; padding: 1.75rem 4rem 1.75rem 4rem;`};
+    text-align: center;
+    ${media.mobile`font-size: 1em; padding: 1.4rem 2rem 1.4rem 2rem; line-height: 1.6rem;`};
+    ${media.tablet`font-size: 1.1em; padding: 1.75rem 4rem 1.75rem 4rem; line-height: 1.7rem;`};
   }
   .answerOptionLabel:active {
     background-color: ${colors.$pinkColor};
