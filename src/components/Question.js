@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Quiz from '../components/quiz/Quiz';
 import Result from '../components/result/Result';
-import quizQuestions from '../api/quizQuestions';
+import quizQuestions from '../questions/quizQuestions';
 import './utils/App.css'
 
 const Wrapper = styled.div`
@@ -32,22 +32,15 @@ class Question extends Component {
       answer: '',
       answersCount: {
         Briggs: {
-          E: 2,
-          I: 1,
-          S: 2,
-          N: 1,
-          T: 2,
-          F: 1,
-          J: 1,
-          P: 2
+          E: 0,
+          I: 0,
+          S: 0,
+          N: 0,
+          T: 0,
+          F: 0,
+          J: 0,
+          P: 0
         }
-        // // test
-        // Briggs: {
-        //   I: 1,
-        //   S: 1,
-        //   T: 1,
-        //   J: 1,
-        // }
       },
       resultBriggs: ''
     }
@@ -67,15 +60,16 @@ class Question extends Component {
   setUserAnswer(answer) {
     const answersCount = this.state.answersCount
     let applyAnswer = answer => {
-      const answer_array = answer.split(',')
+      const answer_array = answer.split(', ')
       let briggsAnswer = answer_array[0]
       if (answer_array.length === 1) {
         answersCount['Briggs'][briggsAnswer] += 1
       } else if (answer_array.length === 2) {
-        answersCount['Briggs'][briggsAnswer] -= 1
+        answersCount['Briggs'][answer_array[1]] += 1
       }
       return answersCount
     }
+    
     this.setState({
       answersCount: applyAnswer(answer),
       answer: answer
@@ -111,8 +105,6 @@ class Question extends Component {
   getBriggsResults() {
     const answerCount = this.state.answersCount
     const briggsAnswer = answerCount['Briggs']
-    // const answersCountKeysBriggs = Object.keys(briggsAnswer)
-    // const answersCountValuesBriggs = answersCountKeysBriggs.map(key => briggsAnswer[key])
     let briggsType = ''
     if (briggsAnswer.E >= briggsAnswer.I) {
       briggsType += 'E'

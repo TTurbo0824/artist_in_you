@@ -1,67 +1,3 @@
-// //test
-// // briggs: EI, SN, TF, JP
-// var quizQuestions = [
-//   // test #1
-//   {
-//     question: "In front of an esoteric but yet eye-catching painting, you will...",
-//     answers: [
-//       {
-//         type: 'J',
-//         content: "Take notes of the artist and title of the painting, and move on to the next painting. (J)"
-//       },
-//       {
-//         type: 'J, No',
-//         content: "Stand there for a moment to appreciate the painting. (P)"
-//       }
-//     ]
-//   },
-//   // test #2
-//   {
-//     question: "Photography is not allowed inside the exhibition space. But the person next to you is clearly taking pictures!",
-//     answers: [
-//       {
-//         type: 'T',
-//         content: "The staff will take care of it. I will just go my way. (T)"
-//       },
-//       {
-//         type: 'T, No',
-//         content: "I will politely stop them and say taking pictures is prohibited. (F)"
-//       }
-//     ]
-//   },
-//   // test #3
-//   {
-//     question: "If someone asks you about the exhibition, you will answer",
-//     answers: [
-//       {
-//         type: 'S',
-//         content: "based on the specific facts, like what artist is featured, how many artworks are displayed, or how crowded the museum was. (S)"
-//       },
-
-//       {
-//         type: 'S, No',
-//         content: "based on my impressions on specific things, like the way I felt in front of the painting. (N)"
-//       }
-//     ]
-//   },
-//   // test #4
-//   {
-//     question: "Your friends say it's the best exhibition ever. But what if you didn't like it at all?",
-//     answers: [
-//       {
-//         type: 'I',
-//         content: "I will proudly say that I didn't enjoy the exhibition and tell them why. (I)"
-//       },
-//       {
-//         type: 'I, No',
-//         content: "Just say it was good so I don't have to go against my friends. (E)"
-//       }
-//     ]
-//   }
-// ]
-
-// export default quizQuestions
-
 // briggs: EI, SN, TF, JP
 var quizQuestions = [
   // question #1
@@ -73,7 +9,7 @@ var quizQuestions = [
         content: "Something pretty and simple, so I can hang it anywhere."
       },
       {
-        type: 'S, No',
+        type: 'S, N',
         content: "Intense, offering me something to think about."
       }
     ]
@@ -87,7 +23,7 @@ var quizQuestions = [
         content: '"I really like this area right here. Did you use pastel?"'
       },
       {
-        type: 'F, No',
+        type: 'F, T',
         content: '"Did you draw this for me? You did a real good job!"'
       }
     ]
@@ -102,7 +38,7 @@ var quizQuestions = [
       },
 
       {
-        type: 'J, No',
+        type: 'J, P',
         content: "Cool, I will go there if I get a chance."
       }
     ]
@@ -116,7 +52,7 @@ var quizQuestions = [
         content: "Google the artist's info and famous works in advance."
       },
       {
-        type: 'T, No',
+        type: 'T, F',
         content: "Do nothing. I want to get a fresh impression."
       }
     ]
@@ -131,7 +67,7 @@ var quizQuestions = [
       },
 
       {
-        type: 'E, No',
+        type: 'E, I',
         content: "I prefer going to exhibitions alone anyway. I will visit there as planned."
       }
     ]
@@ -146,7 +82,7 @@ var quizQuestions = [
       },
 
       {
-        type: 'N, No',
+        type: 'N, S',
         content: "Can it really replace reality? I'd rather go there and see it for myself."
       }
     ]
@@ -161,7 +97,7 @@ var quizQuestions = [
       },
 
       {
-        type: 'P, No',
+        type: 'P, J',
         content: "I still have time to spare. I will look around and take a different route."
       }
     ]
@@ -176,7 +112,7 @@ var quizQuestions = [
       },
 
       {
-        type: 'E, No',
+        type: 'E, I',
         content: "Why now? I hate being around people. I will stay away from the group."
       }
     ]
@@ -190,7 +126,7 @@ var quizQuestions = [
         content: "Quickly take notes on the painting, and move on to the next painting."
       },
       {
-        type: 'J, No',
+        type: 'J, P',
         content: "Stand there for a while to appreciate the painting. I want to cherish the moment."
       }
     ]
@@ -204,7 +140,7 @@ var quizQuestions = [
         content: "The staff will take care of it. I will just go my way."
       },
       {
-        type: 'T, No',
+        type: 'T, F',
         content: "I will politely stop them and say taking pictures is prohibited."
       }
     ]
@@ -219,7 +155,7 @@ var quizQuestions = [
       },
 
       {
-        type: 'S, No',
+        type: 'S, N',
         content: "Based on my impressions on specific things, like the way I felt in front of my favorite painting."
       }
     ]
@@ -233,7 +169,7 @@ var quizQuestions = [
         content: "I will proudly say that I didn't enjoy the exhibition and tell them why."
       },
       {
-        type: 'I, No',
+        type: 'I, E',
         content: "Just say it was good so I don't have to go against my friends."
       }
     ]

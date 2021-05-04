@@ -1,10 +1,8 @@
 import React from 'react';
-// import ReactDOM from "react-dom";
 import propTypes from 'prop-types';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-// import ImageZoom from 'react-medium-image-zoom';
 import Artist from './Artist';
 import styled from 'styled-components';
 import '../utils/App.css';
@@ -188,7 +186,6 @@ const options = {
   dots: true,
   autoplay: false,
   navContainer: '.main-content .custom-nav',
-  // stagePadding: 5,
   smartSpeed: 1000,
   responsive: {
       0: {
@@ -215,7 +212,6 @@ const options = {
 
 function Result(props) {
   var artist;
-  // artist = Artist[2];
   if (props.resultBriggs === "ESTP" || props.resultBriggs === "ESFP") {
       artist = Artist[0];
   } else if (props.resultBriggs === "ISTJ" || props.resultBriggs === "ISFJ") {
@@ -234,8 +230,6 @@ function Result(props) {
       artist = Artist[7];
   }
   
-  console.log(props.resultBriggs);
-
   return (
     <Wrapper>
       <div className="app-frame">
@@ -304,22 +298,6 @@ function Result(props) {
             </div>
           </div>
         </div>
-        {/* <ImageZoom
-          shouldReplaceImage={false}
-          image={{
-            src: `/artist_in_you/images/artworks/${artist.image}00.jpeg`,
-            alt: 'normal',
-            // className: 'artwork-box',
-            style: { width: '200px', height: '200px' }
-            
-          }}
-          zoomImage={{
-            src: `/artist_in_you/images/artworks/big/${artist.image}00_big.jpeg`,
-            alt: 'big',
-            style: { width: '100%', height: '100%' }
-
-          }}
-      /> */}
       </div>
     </Wrapper>
   );
