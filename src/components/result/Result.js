@@ -130,7 +130,7 @@ const Wrapper = styled.div`
     color: ${colors.$textColor};
     text-align: left;
     white-space: pre-wrap;
-    word-break: break-all;
+    // word-break: break-all;
     hyphens: auto;
     ${media.mobile`font-size: .9em;`};
     ${media.tablet`font-size: .95em;`};

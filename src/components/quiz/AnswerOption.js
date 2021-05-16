@@ -2,7 +2,6 @@ import React from 'react';
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 import '../utils/App.css';
-// import { fonts, colors } from '../utils/_var';
 import { colors } from '../utils/_var';
 import { media } from '../utils/_media-queries';
 
