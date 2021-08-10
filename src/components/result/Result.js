@@ -238,7 +238,7 @@ function Result(props) {
         <div
           className="img-box"
           style={{
-            "backgroundImage": `url(/artist_in_you/images/${artist.image}.jpeg)`,
+            "backgroundImage": `url(/artist_in_you/images/${artist.lastName}.jpeg)`,
           }}
         ></div>
         <div className="quoteContainer">
@@ -250,47 +250,29 @@ function Result(props) {
         <h1 className="title"><span>Interesting Facts about the Artist</span></h1>
         <div className="factContainer">
         <ul>
-          <li>{artist.facts[0]}</li>
-          <li>{artist.facts[1]}</li>
-          <li>{artist.facts[2]}</li>
-          <li>{artist.facts[3]}</li>
-          <li>{artist.facts[4]}</li>
+        {
+          artist.facts.map((el, idx) => (
+            <li key={idx}>{el}</li>
+          ))
+        }
         </ul>
         </div>
         <div styles="padding-bottom: 40px;"></div>
         <h1 className="title"><span>Famous Artworks by the Artist</span></h1>
           <div className="main-content">
           <OwlCarousel className="owl-theme" responsiveClass="true" {...options}>
-            <div
-              className="artwork-box item"
-              style={{
-                "backgroundImage": `url(/artist_in_you/images/artworks/${artist.image}00.jpeg)`,
-              }}
-            ></div>
-            <div
-              className="artwork-box item"
-              style={{
-                "backgroundImage": `url(/artist_in_you/images/artworks/${artist.image}01.jpeg)`,
-              }}
-            ></div>
-            <div
-              className="artwork-box item"
-              style={{
-                "backgroundImage": `url(/artist_in_you/images/artworks/${artist.image}02.jpeg)`,
-              }}
-            ></div>
-            <div
-              className="artwork-box item"
-              style={{
-                "backgroundImage": `url(/artist_in_you/images/artworks/${artist.image}03.jpeg)`,
-              }}
-            ></div>
-            <div
-              className="artwork-box item"
-              style={{
-                "backgroundImage": `url(/artist_in_you/images/artworks/${artist.image}04.jpeg)`,
-              }}
-            ></div>
+          {
+            artist.images.map((img) => (
+              (
+                <div
+                  className="artwork-box item"
+                  style={{
+                    "backgroundImage": `url(/artist_in_you/images/artworks/${img}.jpeg)`,
+                  }}
+                ></div>
+              )
+            ))
+          }
           </OwlCarousel>
           <div className="owl-theme">
             <div className="owl-controls">
