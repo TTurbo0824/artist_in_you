@@ -12,7 +12,6 @@ const Wrapper = styled.div`
   .answerOption {
     font-family: Poppins;
     text-align: center;
-
   }
   .answerOptionButton {
       position: absolute;

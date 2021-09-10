@@ -36,7 +36,7 @@ const QuestionCount = props => {
   return (
     <Wrapper>
       <div className="questionCountLeft">
-      <b>Q {props.counter}</b>
+        <b>Q {props.counter}</b>
       </div>
       <div className="questionCountRight">
         <b><span>{props.counter}</span> / <span>{props.total}</span></b>

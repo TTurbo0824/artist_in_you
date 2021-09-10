@@ -43,12 +43,10 @@ const Wrapper = styled.div`
     list-style: none;
     padding: 0 0 0 .3em;
     margin-bottom: 2.2em;
-    // background: ${colors.$textColor};
   }
   li {
     width: 85%;
     margin: auto;
-    // color: #707070;
     color: #555555;
     margin-bottom: 1em;
     font-family: ${fonts.$titleFont};
@@ -57,7 +55,6 @@ const Wrapper = styled.div`
   }
   li::before {
     content: "•";
-    // color: ${colors.$textColor};
     color: #535994;
     display: inline-block; 
     width: 1em;
@@ -130,7 +127,6 @@ const Wrapper = styled.div`
     color: ${colors.$textColor};
     text-align: left;
     white-space: pre-wrap;
-    // word-break: break-all;
     hyphens: auto;
     ${media.mobile`font-size: .9em;`};
     ${media.tablet`font-size: .95em;`};
@@ -188,25 +184,25 @@ const options = {
   navContainer: '.main-content .custom-nav',
   smartSpeed: 1000,
   responsive: {
-      0: {
-          items: 1,
-      },
-      319: {
-        items: 2,
-        margin: 5,
-      },
-      400: {
-          items: 3,
-          margin: 10,
-      },
-      545: {
-        items: 3,
-        margin: 5,
-      },
-      700: {
-          items: 3,
-          margin: 5,
-      }
+    0: {
+      items: 1,
+    },
+    319: {
+      items: 2,
+      margin: 5,
+    },
+    400: {
+      items: 3,
+      margin: 10,
+    },
+    545: {
+      items: 3,
+      margin: 5,
+    },
+    700: {
+      items: 3,
+      margin: 5,
+    }
   },
 };
 
@@ -249,17 +245,17 @@ function Result(props) {
         <p className="description">{artist.description}</p>
         <h1 className="title"><span>Interesting Facts about the Artist</span></h1>
         <div className="factContainer">
-        <ul>
-        {
-          artist.facts.map((el, idx) => (
-            <li key={idx}>{el}</li>
-          ))
-        }
-        </ul>
+          <ul>
+          {
+            artist.facts.map((el, idx) => (
+              <li key={idx}>{el}</li>
+            ))
+          }
+          </ul>
         </div>
         <div styles="padding-bottom: 40px;"></div>
         <h1 className="title"><span>Famous Artworks by the Artist</span></h1>
-          <div className="main-content">
+        <div className="main-content">
           <OwlCarousel className="owl-theme" responsiveClass="true" {...options}>
           {
             artist.images.map((img) => (

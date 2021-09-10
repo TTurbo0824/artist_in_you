@@ -1,6 +1,7 @@
 {
   "homepage": "https://tturbo0824.github.io/artist_in_you/",
-  "name": "kj",
+  "name": "artist-in-you",
+  "author": "Kyungjoo Ha",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

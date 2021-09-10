@@ -35,10 +35,9 @@ const Question = props => {
       <div className="row">
         <div className="col">
           <h1><b>{props.content}</b></h1>
-          <h2>this is just a empty content. this is just a empty content. this is just a empty content.</h2>
+          <h2>this is just an empty content. this is just an empty content. this is just an empty content.</h2>
         </div>
       </div>
-     
     </Wrapper>
   )
 }
